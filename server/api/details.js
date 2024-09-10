@@ -5,6 +5,7 @@ export default defineEventHandler(async (event) => {
   try {
     const query = getQuery(event);
     const name = query.name;
+    console.log(name);
     if (!name) {
       throw createError({
         statusCode: 400,
